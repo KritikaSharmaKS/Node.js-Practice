@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
         res.write('<html>');
         res.write('<head><title>Welcome</title></head>');
         res.write('<h1>WELCOME TO MY HOUSE!!!</h1>');
-        res.write('<body><form action="/create-user" method="POST">Username: <input type="text"><br><br><button type="submit">Send</button></form></body>');
+        res.write('<body><form action="/create-user" method="POST">Username: <input type="text" name="username"><br><br><button type="submit">Send</button></form></body>');
         res.write('</html>');
         return res.end();
     }
@@ -28,25 +28,12 @@ const server = http.createServer((req, res) => {
         });
         req.on('end', () => {
             const parsedBody = Buffer.concat(body).toString();
-            console.log('parsedBody', parsedBody);
+            console.log(parsedBody.split('=')[1]);
         });
         res.statusCode = 302;
         res.setHeader('Location', '/');
         return res.end();
     }
-    /*if (url === '/create-user') {
-        const body = [];
-        req.on('data', chunk => {
-            body.push(chunk);
-        });
-        req.on('end', () => {
-            const parsedBody = Buffer.concat(body).toString();
-            console.log(parsedBody.split('=')[1]); // username=whatever-the-user-entered
-        });
-        res.statusCode = 302;
-        res.setHeader('Location', '/');
-        res.end();
-    }*/
 });
 
 server.listen(3003);
