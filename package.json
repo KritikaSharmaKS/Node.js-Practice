@@ -1,0 +1,19 @@
+{
+  "name": "node.js-practice",
+  "version": "1.0.0",
+  "description": "Node.js Practice following the course NodeJS - The Complete Guide on Udemy by Maximilian Schwarzmuller",
+  "main": "./Section-3 Understanding Basics/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KritikaSharmaKS/Node.js-Practice.git"
+  },
+  "author": "Kritika Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KritikaSharmaKS/Node.js-Practice/issues"
+  },
+  "homepage": "https://github.com/KritikaSharmaKS/Node.js-Practice#readme"
+}
