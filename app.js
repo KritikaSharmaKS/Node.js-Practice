@@ -7,4 +7,4 @@ const server = http.createServer((req, res) => {
     console.log("Hey, I am in the Server!!!");
 });
 
-server.listen(3001);
+server.listen(3000);
