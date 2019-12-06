@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+const adminRoutes = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+
 app.use(bodyParser.urlencoded({msExtendedCode: false}));
 
 // app.use('/', (req, res, next) => {
@@ -10,11 +13,8 @@ app.use(bodyParser.urlencoded({msExtendedCode: false}));
 //     next();
 // });
 
+app.use(adminRoutes);
 
-
-app.use('/', (req, res, next) => {
-    //... return a response if next is not called
-    res.send('<h1>Hello from Express!!!</h1>'); //Header already set
-});
+app.use(shopRoutes);
 
 app.listen(3005);
