@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({msExtendedCode: false}));
 // });
 
 app.use('/add-product', (req, res, next) => {
-    res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit"></button></form>')
+    res.send('<form action="/product" method="POST"><input type="text" name="title"><br><button type="submit">SEND</button></form>')
     //next(); //allows the request to go thru the next middleware
 });
 
