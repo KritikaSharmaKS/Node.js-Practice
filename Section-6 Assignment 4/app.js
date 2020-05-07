@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRoute);
-app.use(defaultRoute);
+app.use(defaultRoute.router);
 
 app.use((req, res, next) => {
     res.status(404).render('404', {pageTitle: "404", path:''});
