@@ -10,8 +10,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
     usernameArray.push({ title : req.body.title });
-    res.render('default', {pageTitle: 'Welcome', path: '/'});
-    res.redirect('/');
+    res.redirect('/users');
  });
 
-module.exports = { router , usernameArray};
+module.exports = {router , usernameArray};
