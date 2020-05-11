@@ -8,4 +8,4 @@ router.get('/users', (req, res, next) => {
     res.render('users', {pageTitle: 'Users', path: '/users', usernameArray });
 });
 
-exports.routes = router;
+module.exports = router;
